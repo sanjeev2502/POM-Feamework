@@ -17,10 +17,10 @@ import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.Reporter;
 
-
-import junit.framework.Assert;
+//import junit.framework.Assert;
 
 public class CommonFunction  {
 	private WebDriver driver;
@@ -111,12 +111,12 @@ public class CommonFunction  {
 	public void verifyText(WebDriver driver,String expectedValue,WebElement elem){
 		if(getText(elem).equals(expectedValue))
 		{
-			Assert.assertTrue("String matched", true);
+			Assert.assertTrue(true);
 			Reporter.log("String Matched");
 
 		}
 		else
-		{Assert.assertFalse("Not matching", false);
+		{Assert.assertFalse(false);
 		Reporter.log("Not Matching");
 		}
 	}
